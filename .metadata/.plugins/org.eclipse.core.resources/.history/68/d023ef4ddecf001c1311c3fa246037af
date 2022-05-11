@@ -1,0 +1,10 @@
+package xuexie;
+
+public interface inte1 {
+	
+	int x =9;
+	void shitou() ;
+	void zemzmzao();
+	
+	
+}

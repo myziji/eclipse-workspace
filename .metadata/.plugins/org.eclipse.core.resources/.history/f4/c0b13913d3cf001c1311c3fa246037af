@@ -1,0 +1,28 @@
+package xuexie;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public final class  Immutable {
+
+	private   int x ;
+	private  String s;
+	private  Dog dog;
+	
+	public Immutable(int x,Dog dog) {
+		this.x = x;
+		this.dog = dog;
+	}
+	
+	public String getS() {
+		return s;
+	}
+	public Dog getDog() {
+		return this.dog;
+	}
+
+
+
+	
+}
+	

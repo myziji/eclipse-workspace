@@ -1,0 +1,32 @@
+package blind75;
+
+import java.util.Stack;
+
+public class MinStack {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+    public MinStack() {
+        
+    }
+    
+    public void push(int val) {
+    	Stack<Integer> minStack = new Stack<>();
+    	
+        
+    }
+    
+    public void pop() {
+        
+    }
+    
+    public int top() {
+        
+    }
+    
+    public int getMin() {
+        
+    }
+}

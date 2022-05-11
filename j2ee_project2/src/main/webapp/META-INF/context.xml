@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context path="/j2ee_project2" docBase="j2ee_project2"
+        debug="5" reloadable="true" crossContext="true">
+
+	<Resource name="jdbc/MySqlDB"
+		auth="Container"
+		type="javax.sql.DataSource"
+		factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
+		username="root"
+		password=""
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/test"
+		maxWait="1000"
+		removeAbandoned="true"
+		maxActive="30"
+		maxIdle="10"
+		removeAbandonedTimeout="60"
+		logAbandoned="true"/>
+
+	<Resource name="jdbc/OracleDB"
+		auth="Container"
+		type="javax.sql.DataSource"
+		factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
+		username="hr"
+		password="hr"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:XE"
+		maxWait="1000"
+		removeAbandoned="true"
+		maxActive="30"
+		maxIdle="10"
+		removeAbandonedTimeout="60"
+		logAbandoned="true"/>
+
+</Context>

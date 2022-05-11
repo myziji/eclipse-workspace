@@ -1,0 +1,14 @@
+package blind75;
+
+public class BestTimeToBuySellStock {
+
+	public static void main(String[] args) {
+		int[] prices = {7,1,5,3,6,4};
+	}
+	
+	public static int BuySellStock(int [] p) {
+		for(int l=0, r=p.length-1; l<r;l++,r++) {
+			
+		}
+	}
+}

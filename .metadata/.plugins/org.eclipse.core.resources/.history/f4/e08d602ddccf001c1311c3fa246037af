@@ -1,0 +1,6 @@
+package xuexie;
+
+public interface inte1 {
+	static final int x =9;
+	
+}

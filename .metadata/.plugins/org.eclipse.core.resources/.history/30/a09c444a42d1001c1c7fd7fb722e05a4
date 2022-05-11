@@ -1,0 +1,43 @@
+package com.dianshang.DBConnection;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Connection;
+
+public class DBConnection {
+	public static final String url = "jdbc:mysql://localhost:3306/";
+	public static final String user = "root";
+	public static final String password = "123456";
+	public static Connection GetConnection() throws ClassNotFoundException {
+		Connection con = null;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			con = (Connection) DriverManager.getConnection(url, user, password);
+			System.out.println("connected to database siccessfully !");
+		}catch(SQLException e) {
+			System.out.println(e.getMessage());
+		}finally{
+			if(con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					
+					e.printStackTrace();
+				}
+			}
+		}
+		
+//		try(con =(Connection) DriverManager.getConnection(url,user,password)){
+//			System.out.println("cs");
+//		}catch(SQLException e) {
+//			System.out.println(e.getMessage());
+//		}
+		
+		return con;
+	}
+	
+	public static void test() {
+		
+	}
+}

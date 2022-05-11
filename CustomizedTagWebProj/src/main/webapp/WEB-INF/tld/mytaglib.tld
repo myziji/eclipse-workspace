@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<!-- a tag library descriptor -->
+
+<taglib>
+   <tlibversion>1.0</tlibversion>
+   <jspversion>1.1</jspversion>
+   <shortname>mytag</shortname>
+   <uri></uri>
+   <info>A simple tab library for the 
+   examples</info>
+
+  <tag>
+    <name>hello</name>
+    <tagclass>com.avtech.j2ee.HelloTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>Say Hi</info>
+  </tag>       
+
+  <tag>
+    <name>hello2</name>
+    <tagclass>com.avtech.j2ee.HelloTag2</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>Hello 2</info>
+  </tag>       
+  
+  <tag>
+	  <name>helloparam</name>
+	  <tagclass>com.avtech.j2ee.HelloTagParam</tagclass>
+	  <bodycontent>empty</bodycontent>
+	  <info>Tag with Parameter</info>
+	  <attribute>
+	     <name>name</name>
+	     <required>false</required>
+	     <rtexprvalue>false</rtexprvalue>
+	  </attribute>
+  </tag>
+    
+</taglib>

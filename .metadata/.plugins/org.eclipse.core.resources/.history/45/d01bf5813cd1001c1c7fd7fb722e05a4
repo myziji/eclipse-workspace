@@ -1,0 +1,8 @@
+package com.dianshang.DBConnection;
+
+public class DBConnection {
+
+	public static Connection GetConnection() {
+		
+	}
+}

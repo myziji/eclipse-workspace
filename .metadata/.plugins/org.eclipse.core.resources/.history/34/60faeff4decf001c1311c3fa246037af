@@ -1,0 +1,12 @@
+package xuexie;
+
+public interface inte1 {
+	
+	List<String> list = new ArrayList<>();
+	
+	default void eat() {
+		System.out.print("meow");
+	}
+	
+	
+}

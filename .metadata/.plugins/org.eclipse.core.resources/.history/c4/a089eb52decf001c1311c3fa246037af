@@ -1,0 +1,10 @@
+package xuexie;
+
+public interface CatInterface {
+	
+	default void eat() {
+		System.out.print("meow");
+	}
+	
+	
+}

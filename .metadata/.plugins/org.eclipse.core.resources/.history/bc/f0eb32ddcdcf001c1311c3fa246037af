@@ -1,0 +1,32 @@
+package xuexie;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public final class  Immutable {
+
+	private final  int x =10;
+	private  String s;
+	
+	
+	
+	public Immutable(String c ) {
+		this.s = c;
+	}
+	
+	
+	
+	public String getS() {
+		return s;
+	}
+
+	public void setS(String s) {
+		this.s = s;
+	}
+
+	public void print() {
+		System.out.print(s);
+	}
+	
+}
+	

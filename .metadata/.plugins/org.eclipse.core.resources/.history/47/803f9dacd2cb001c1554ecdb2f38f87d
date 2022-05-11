@@ -1,0 +1,13 @@
+package blind75;
+
+public class ContainsDuplicate {
+
+	
+	public static void main(String agrs[]) {
+		int[] arr = new int [5];
+		arr[] = [1,2,3,4,5];
+		
+		
+	}
+	
+}

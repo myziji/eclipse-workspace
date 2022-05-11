@@ -1,0 +1,9 @@
+package xuexie;
+
+public interface test1 {
+
+	String s =  "132";
+	String s1 = s;
+	
+	s1=s;
+}

@@ -1,0 +1,11 @@
+package blind75;
+
+public class ContainsDuplicate {
+
+	
+	public static void main(String agrs[]) {
+		
+		
+	}
+	
+}
