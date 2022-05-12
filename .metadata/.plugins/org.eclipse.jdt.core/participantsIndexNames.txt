@@ -1,7 +1,13 @@
 INDEX VERSION 1.131
-C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3255451845.index
-\ j2ee_project\src\main\java
 C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\793126994.index
 \j2ee_project2\src\main\java
+C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3755826455.index
+\Spring3HibernateIntegration\src\main\java
+C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3255451845.index
+\ j2ee_project\src\main\java
+C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1669441228.index
+\Spring3HibernateIntegration\src\main\java
+C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3874025267.index
+\Lab_SpringHibernate\src\main\java
 C:\Users\james\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2023008386.index
 \CustomizedTagWebProj\src\main\java

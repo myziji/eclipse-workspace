@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 16.3-b01 (Sun Microsystems Inc.)
+Class-Path: antlr-2.7.6.jar aspectjrt.jar aspectjweaver.jar commons-co
+ llections-3.1.jar commons-dbcp-1.2.2.jar commons-logging-1.1.1.jar co
+ mmons-pool-1.4.jar dom4j-1.6.1.jar ejb3-persistence.jar hibernate-jpa
+ -2.0-api-1.0.0.Final.jar hibernate3.jar hsqldb.jar javassist-3.9.0.GA
+ .jar jta-1.1.jar org.springframework.aop-3.0.3.RELEASE.jar org.spring
+ framework.asm-3.0.3.RELEASE.jar org.springframework.aspects-3.0.3.REL
+ EASE.jar org.springframework.beans-3.0.3.RELEASE.jar org.springframew
+ ork.context-3.0.3.RELEASE.jar org.springframework.context.support-3.0
+ .3.RELEASE.jar org.springframework.core-3.0.3.RELEASE.jar org.springf
+ ramework.expression-3.0.3.RELEASE.jar org.springframework.instrument-
+ 3.0.3.RELEASE.jar org.springframework.instrument.tomcat-3.0.3.RELEASE
+ .jar org.springframework.jdbc-3.0.3.RELEASE.jar org.springframework.j
+ ms-3.0.3.RELEASE.jar org.springframework.orm-3.0.3.RELEASE.jar org.sp
+ ringframework.oxm-3.0.3.RELEASE.jar org.springframework.test-3.0.3.RE
+ LEASE.jar org.springframework.transaction-3.0.3.RELEASE.jar org.sprin
+ gframework.web-3.0.3.RELEASE.jar org.springframework.web.portlet-3.0.
+ 3.RELEASE.jar org.springframework.web.struts-3.0.3.RELEASE.jar servle
+ t-api.jar slf4j-api-1.5.8.jar slf4j-simple-1.5.8.jar spring-agent.jar
+  spring-aop.jar spring-aspects.jar spring.jar 
+

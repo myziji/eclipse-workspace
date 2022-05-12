@@ -3,7 +3,7 @@ package com.bht.hibernate.dao;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.transaction.Transaction;
+import org.hibernate.Transaction;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -14,6 +14,8 @@ import com.bht.hibernate.util.HibernateUtil;
 
 public class UsersDaoo implements UsersDao{
 	
+	
+
 	@Override
 	public void saveUser(User user) {
 		Transaction transaction = null;
@@ -37,7 +39,7 @@ public class UsersDaoo implements UsersDao{
 		}
 	}
 	
-	public void insertStudent() {
+	public void insertUser() {
 		Transaction transaction = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 			// start a transaction
@@ -67,10 +69,10 @@ public class UsersDaoo implements UsersDao{
 			transaction = session.beginTransaction();
 
 			// save the student object
-			String hql = "UPDATE Student set firstName = :firstName " + "WHERE id = :studentId";
+			String hql = "UPDATE Student set UserName = :username ";
 			Query query = session.createQuery(hql);
-			query.setParameter("firstName", user.getFirstName());
-			query.setParameter("studentId", 1);
+			
+			query.setParameter("userId", 1);
 			int result = query.executeUpdate();
 			System.out.println("Rows affected: " + result);
 
@@ -128,7 +130,7 @@ public class UsersDaoo implements UsersDao{
 			List results = query.getResultList();
 			
 			if (results != null && !results.isEmpty()) {
-				user = (user) results.get(0);
+				user = (User) results.get(0);
 			}
 			// commit transaction
 			transaction.commit();
@@ -144,7 +146,7 @@ public class UsersDaoo implements UsersDao{
 	@Override
 	public List<User> getAllStudents() {
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			return session.createQuery("from Student", User.class).list();
+			return session.createQuery("from users", User.class).list();
 		}
 	}
 

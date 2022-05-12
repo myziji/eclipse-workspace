@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context path="/j2ee_project2" docBase="j2ee_project2" debug="5"
+	reloadable="true" crossContext="true">
+
+	<!-- Oracle -->
+	<!-- <Resource name="jdbc/XE" auth="Container" type="javax.sql.DataSource" 
+		url="jdbc:oracle:thin:@localhost:1521:ORCL11" driverClassName="oracle.jdbc.driver.OracleDriver" 
+		username="hr" password="hr" maxActive="20" maxIdle="3" maxWait="10000" poolPreparedStatements="true" 
+		maxOpenPreparedStatements="100" validationQuery="SELECT SYSDATE FROM DUAL" 
+		/> -->
+
+	<!-- Derby Client -->
+	<!-- <Resource name="jdbc/TradeDataSource" auth="Container" type="javax.sql.DataSource" 
+		maxActive="100" maxIdle="30" maxWait="10000" username="admin" password="password" 
+		driverClassName="org.apache.derby.jdbc.ClientDriver" url="jdbc:derby://localhost:1528/tradedb?create=true"/> -->
+
+	<!-- DB2, install db2jcc.jar and db2jcc_license_cu.jar to tomcathome/lib -->
+	<!-- <Resource name="jdbc/TradeDataSource" auth="Container" type="javax.sql.DataSource" 
+		maxActive="100" maxIdle="30" maxWait="10000" username="db2admin" password="password" 
+		driverClassName="com.ibm.db2.jcc.DB2Driver" url="jdbc:db2://localhost:50000/tradedb" 
+		connectionProperties="driverType=4;"/> -->
+
+	<!-- Derby EmbeddedDriver <Resource name="jdbc/TradeDataSource" auth="Container" 
+		type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000" 
+		driverClassName="org.apache.derby.jdbc.EmbeddedDriver" url="jdbc:derby:tradedb;create=true"/> -->
+
+
+	<Resource name="jdbc/MySqlDB" auth="Container"
+		type="javax.sql.DataSource" maxTotal="100" maxIdle="30"
+		maxWaitMillis="10000" username="root" password="root"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/test?useSSL=false&amp;zeroDateTimeBehavior=convertToNull" />
+
+	<Resource name="jdbc/XE" auth="Container"
+		type="javax.sql.DataSource" username="hr" password="hr"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:ORCL11" />
+
+</Context>
