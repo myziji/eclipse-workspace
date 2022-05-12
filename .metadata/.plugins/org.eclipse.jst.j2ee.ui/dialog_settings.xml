@@ -4,6 +4,10 @@
 		<item value="NULL_RUNTIME"/>
 	</list>
 	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\james\Desktop\新建文件夹\j2ee_project2.war"/>
 		<item value="C:\Users\james\Desktop\新建文件夹\CustomizedTagWebProj.war"/>
+	</list>
+	<list key="J2EE_IMPORT_APP_CLIENT">
+		<item value="C:\Users\james\Desktop\新建文件夹\HibernateProject_TwoTables.jar"/>
 	</list>
 </section>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+         "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.eca.hibernate.Account" table="ACCOUNT" lazy="false">
+		<id name="id" column="id" type="java.lang.Long" unsaved-value="null">
+			<generator class="native" />
+		</id>
+		<property name="acctName" column="ACCT_NAM" type="java.lang.String"
+			not-null="true" />
+		<property name="acctNumber" column="ACCT_NUM" type="java.lang.Integer"
+			not-null="true" />
+		<property name="firstName" column="firstName" type="java.lang.String"
+			not-null="true" />
+		<property name="lastName" column="lastName" type="java.lang.String"
+			not-null="true" />
+	</class>
+
+</hibernate-mapping>
