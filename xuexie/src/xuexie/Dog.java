@@ -1,6 +1,6 @@
 package xuexie;
 
-public abstract class Dog implements  inte1{
+public abstract  class Dog implements  inte1{
 	
 	// extends 继承animal(parents)里所有的东西
 	// 即使dog里没有的method 到main method 里也能调用 
@@ -13,7 +13,7 @@ public abstract class Dog implements  inte1{
 		System.out.println("wang wang");
 	}
 	//overlording 就是相同的名字的method 不同的parameter the return type can be different
-	public abstract void eat(int y);
+	public abstract void eat1(int y);
 	 public void printY(int y) {
 		 System.out.print(y);
 		 

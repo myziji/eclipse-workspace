@@ -1,5 +1,8 @@
 package xuexie;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class Text {
 
 	
@@ -34,6 +37,9 @@ public class Text {
 		//imm.print();
 		imm.getDog();
 		dog.eat();
+		HashSet<String> set = new HashSet<>();
+		set.add(null);
+		
 	}
 		
 	

@@ -3,21 +3,19 @@ package xuexie;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class  extends tst  {
+public  final class Immutable   {
 
 	private   final int x ;
 	private   Dog dog;
 	
-	public Immutable(int x,Dog dog) {
+	public Immutable(int x) {
 		this.x = x;
-		this.dog = dog;
+		
 	}
 	
-	public void shitou() {
-	
-	}
-	public Dog getDog() {
-		return this.dog;
+
+	public int getX() {
+		return this.x;
 	}
 
 

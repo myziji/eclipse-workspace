@@ -4,6 +4,8 @@
 		<item value="NULL_RUNTIME"/>
 	</list>
 	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\james\Desktop\新建文件夹\Lab_Spring_MVC_Ajax\Spring_MVC_Ajax.war"/>
+		<item value="C:\Users\james\Desktop\新建文件夹\Lab_SpringHibernate.war"/>
 		<item value="C:\Users\james\Desktop\新建文件夹\j2ee_project2.war"/>
 		<item value="C:\Users\james\Desktop\新建文件夹\CustomizedTagWebProj.war"/>
 	</list>

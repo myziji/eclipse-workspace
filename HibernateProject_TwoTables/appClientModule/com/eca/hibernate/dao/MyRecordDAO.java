@@ -12,4 +12,7 @@ public interface MyRecordDAO {
     public void saveRecord(MyRecord record);
 
     public void removeRecord(Long id);
+    
+    
+    
 }

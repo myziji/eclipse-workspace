@@ -10,6 +10,7 @@ public interface inte1 {
 	default void eat() {
 		System.out.print("meow");
 	}
-	
+	static void main() {
+	}
 	
 }
