@@ -9,6 +9,7 @@ import com.alibaba.taobao.service.CategoryService;
 import com.alibaba.taobao.vo.CategoryVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -25,12 +26,12 @@ public class CategoryServiceImpl implements CategoryService {
 
 
     @Override
-    public  void add(AddCategoryReq addCategoryReq) throws ImoocMallException {
+    public void add(AddCategoryReq addCategoryReq) throws ImoocMallException {
         Category category = new Category();
-        BeanUtils.copyProperties(addCategoryReq,category);
+        BeanUtils.copyProperties(addCategoryReq, category);
         System.out.println(category.toString());
         Category categoryOld = categoryRepository.findByName(addCategoryReq.getName());
-        if (categoryOld != null){
+        if (categoryOld != null) {
             throw new ImoocMallException(ImoocMallExceptionEnum.NAME_IS_EXIST);
         }
 
@@ -42,12 +43,12 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public  void  updateCategory(Category updateCategoryReq){
-        if (updateCategoryReq.getName() !=null){
+    public void updateCategory(Category updateCategoryReq) {
+        if (updateCategoryReq.getName() != null) {
             Category categoryOld = categoryRepository.findByName(updateCategoryReq.getName());
             int x = categoryOld.getId();
             int y = updateCategoryReq.getId();
-            if (categoryOld !=null  && x != y){
+            if (categoryOld != null && x != y) {
                 throw new ImoocMallException(ImoocMallExceptionEnum.NAME_IS_EXIST);
             }
         }
@@ -55,36 +56,40 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void delete(int id){
+    public void delete(int id) {
         Category category = categoryRepository.getById(id);
-        if(category ==null){
+        if (category == null) {
             throw new ImoocMallException(ImoocMallExceptionEnum.DELETE_FAILED);
         }
         categoryRepository.delete(category);
     }
 
     @Override
-    public List<Category>  listForAdmin(){
+    public List<Category> listForAdmin() {
         return categoryRepository.findAll();
     }
 
     @Override
-    public List<CategoryVo>  listCategory(){
+    @Cacheable(value = "listCategory")
+    public List<CategoryVo> listCategory(int parentId) {
         List<CategoryVo> categoryList = new ArrayList<>();
-        recursivelyFindCategories(categoryList,0);
+        recursivelyFindCategories(categoryList, parentId);
 
         return categoryList;
     }
 
-    private  void recursivelyFindCategories(List<CategoryVo> categoryVoList, int parentId){
+    private void recursivelyFindCategories(List<CategoryVo> categoryVoList, int parentId) {
+        System.out.println("jin lai l ");
         List<Category> categoryList = categoryRepository.getByParentId(parentId);
-        if(!CollectionUtils.isEmpty(categoryList)){
-            for (int i =0; i<categoryList.size(); i++){
-                    Category category = categoryList.get(i);
-                    CategoryVo saveCategory =  new CategoryVo();
-                    BeanUtils.copyProperties(category,saveCategory);
+        if (!CollectionUtils.isEmpty(categoryList)) {
+            for (int i = 0; i < categoryList.size(); i++) {
+                Category category = categoryList.get(i);
+                System.out.println(category.toString());
+                CategoryVo saveCategory = new CategoryVo();
+                BeanUtils.copyProperties(category, saveCategory);
+                System.out.println(saveCategory.toString());
                 categoryVoList.add(saveCategory);
-                recursivelyFindCategories(saveCategory.getChildCategory(),saveCategory.getParentId());
+                recursivelyFindCategories(saveCategory.getChildCategory(), saveCategory.getId());
             }
         }
     }

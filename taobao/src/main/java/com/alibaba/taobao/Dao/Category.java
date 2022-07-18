@@ -29,8 +29,7 @@ public class Category {
     public Category() {
     }
 
-    public Category(int id, String name, int type, int parentId, int orderNum, Date createTime, Date updateTime) {
-        this.id = id;
+    public Category( String name, int type, int parentId, int orderNum, Date createTime, Date updateTime) {
         this.name = name;
         this.type = type;
         this.parentId = parentId;

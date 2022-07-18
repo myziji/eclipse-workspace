@@ -6,12 +6,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+@ControllerAdvice
 public class GlobalExceptionHandler {
 
     private final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
@@ -22,7 +26,7 @@ public class GlobalExceptionHandler {
         log.error("Default Exception : " , e);
         return ApiRestResponse.error(ImoocMallExceptionEnum.SYSTEM_ERROR);
     }
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(ImoocMallException.class)
     @ResponseBody
     public Object handleImoocMallException(ImoocMallException e){
         log.error("ImoocMallException :  " ,e);

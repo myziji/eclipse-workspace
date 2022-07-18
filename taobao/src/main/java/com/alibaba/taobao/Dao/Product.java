@@ -1,50 +1,80 @@
 package com.alibaba.taobao.Dao;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
-@Table(name ="products")
+@Table(name ="product")
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="product_id")
-    private Long id;
+    private Integer id;
 
-    @Column(name="product_name")
+    @Column(name="name")
     private String name;
 
-    @Column(name="product_color")
-    private String color;
+    @Column(name="image")
+    private String image;
 
-    @Column(name="product_price")
-    private Double price;
+    @Column(name="detail")
+    private String detail;
 
-    @Column(name="product_number")
-    private Long number;
+    @Column(name="category_id")
+    private Integer categoryId;
 
-    @Column(name="product_info")
-    private String info;
+    @Column(name="price")
+    private int price;
 
+    @Column(name="stock")
+    private int stock;
+
+    @Column(name="status")
+    private int status;
+
+    @Column(name="create_time")
+    private Date createTime;
+
+    @Column(name="update_time")
+    private Date update_time;
     public Product() {
     }
 
-    public Product(Long id, String name, String color, Double price, Long number, String info) {
-        this.id = id;
+    public Product(String name, String image, String detail, Integer categoryId, int price, int stock, int status, Date createTime, Date update_time) {
+
         this.name = name;
-        this.color = color;
+        this.image = image;
+        this.detail = detail;
+        this.categoryId = categoryId;
         this.price = price;
-        this.number = number;
-        this.info = info;
+        this.stock = stock;
+        this.status = status;
+        this.createTime = createTime;
+        this.update_time = update_time;
     }
 
-    public Long getId() {
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -56,47 +86,54 @@ public class Product {
         this.name = name;
     }
 
-    public String getColor() {
-        return color;
+    public String getImage() {
+        return image;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public Double getPrice() {
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public Long getNumber() {
-        return number;
+    public int getStatus() {
+        return status;
     }
 
-    public void setNumber(Long number) {
-        this.number = number;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
-    public String getInfo() {
-        return info;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    @Override
-    public String toString() {
-        return "product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                ", price=" + price +
-                ", number=" + number +
-                ", info='" + info + '\'' +
-                '}';
+    public Date getUpdate_time() {
+        return update_time;
     }
+
+    public void setUpdate_time(Date update_time) {
+        this.update_time = update_time;
+    }
+
+
 }

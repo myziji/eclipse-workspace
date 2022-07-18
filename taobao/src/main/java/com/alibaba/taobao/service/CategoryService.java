@@ -17,5 +17,5 @@ public interface CategoryService {
 
     List<Category> listForAdmin();
 
-    List<CategoryVo>  listCategory();
+    List<CategoryVo>  listCategory(int parentId);
 }

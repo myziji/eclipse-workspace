@@ -1,9 +1,7 @@
 package com.alibaba.taobao.filiter;
 
 import com.alibaba.taobao.Dao.User;
-import com.alibaba.taobao.common.ApiRestResponse;
 import com.alibaba.taobao.common.Constant;
-import com.alibaba.taobao.exception.ImoocMallExceptionEnum;
 import com.alibaba.taobao.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -44,7 +42,7 @@ public class AdminFilter implements Filter {
         }else {
             PrintWriter out = new HttpServletResponseWrapper((HttpServletResponse)response).getWriter();
             out.write("{\n" +
-                    "    \"status\": 10006,\n" +
+                    "    \"status\": 10007,\n" +
                     "    \"msg\": \"\"YOU ARE NOT ADMIN\"\",\n" +
                     "    \"data\": null\n" +
                     "}");

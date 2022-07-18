@@ -1,11 +1,12 @@
 package com.alibaba.taobao.vo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 
-public class CategoryVo {
+public class CategoryVo implements Serializable {
 
 
 

@@ -70,14 +70,14 @@ public class UserController {
 	@ResponseBody
 	public ApiRestResponse updateUserInfo(HttpSession session, @RequestParam String signature){
 		User currentUser = (User) session.getAttribute(Constant.IMOOC_MALL_USER);
-		System.out.println(session.getAttribute(Constant.IMOOC_MALL_USER).toString());
+		//System.out.println(session.getAttribute(Constant.IMOOC_MALL_USER).toString());
 		if(currentUser == null){
 			return ApiRestResponse.error(ImoocMallExceptionEnum.LOGIN_FIRST);
 		}
 		User user = new User();
 		user.setUsername(currentUser.getUsername());
 		user.setPersonalizedSignature(signature);
-		System.out.println(user);
+		//System.out.println(user);
 		userService.updateInformation(user);
 		return ApiRestResponse.success();
 	}

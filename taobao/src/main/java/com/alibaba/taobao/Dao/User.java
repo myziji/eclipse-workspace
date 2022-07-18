@@ -39,8 +39,7 @@ public class User {
 	public User() {
 	}
 
-	public User(Long id, String username, String password, Long role, String personalizedSignature, Date createTime, Date updateTime) {
-		this.id = id;
+	public User(String username, String password, Long role, String personalizedSignature, Date createTime, Date updateTime) {
 		this.username = username;
 		this.password = password;
 		this.role = role;

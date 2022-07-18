@@ -1,6 +1,6 @@
 package xuexie;
 
-public abstract  class Dog implements  inte1{
+public abstract  class Dog {
 	
 	// extends 继承animal(parents)里所有的东西
 	// 即使dog里没有的method 到main method 里也能调用 

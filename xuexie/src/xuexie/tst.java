@@ -1,6 +1,8 @@
 package xuexie;
 
 import java.io.IOException;
+import java.io.NotSerializableException;
+import java.io.ObjectOutputStream;
 
 public  class tst {
 
@@ -13,6 +15,9 @@ public  class tst {
 		
 		String str ="";
 	}
-	
+	 private void writeObject(ObjectOutputStream out) throws IOException 
+	    { 
+	        throw new NotSerializableException(); 
+	    }
 	
 }

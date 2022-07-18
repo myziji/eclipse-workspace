@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="jpa"/>
+		<item key="selection" value="capacity"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="jpa"/>
-			<item value="jap"/>
-			<item value="IntegerCache"/>
-			<item value="return IntegerCache.cache[i + 128];"/>
-			<item value="pre"/>
-			<item value="created"/>
-			<item value="java.lang.ExceptionInInitializerError:"/>
-			<item value="acctName"/>
-			<item value="accname"/>
-			<item value="calculateMortgage"/>
+			<item value="capacity"/>
+			<item value="Arraylist"/>
+			<item value="arraylist"/>
+			<item value="array"/>
+			<item value="comparing"/>
+			<item value="compar"/>
+			<item value="rever"/>
+			<item value="rev"/>
+			<item value="re"/>
+			<item value="equals"/>
+			<item value="saveOrUpdate"/>
+			<item value="saveOrUpdate "/>
+			<item value="save"/>
+			<item value="writeObject"/>
+			<item value="ObjectOutputStream"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
